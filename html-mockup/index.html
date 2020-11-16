@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link href="content-widget.css" rel="stylesheet">
+    <link href="css2.css" rel="stylesheet">
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="imagesloaded.pkgd.min.js"></script>
+  </head>
+
+<div class="content-block">
+  <!-- Control buttons -->
+  <div id="myBtnContainer" class="button-group filters-button-group">
+   <button class="btn is-checked" data-filer="*">Show all</button>
+   <button class="btn" data-filter=".series-vlive">Series Vlive</button>
+   <button class="btn" data-filter='.group-vlive'>Group Vlive</button>
+   <button class="btn" data-filter='.solo-vlive'>Solo Vlive</button>
+   <button class="btn" data-filter='.bangchan'>Bang Chan</button>
+   <button class="btn" data-filter='.minho'>Lee Know</button>
+   <button class="btn" data-filter='.changbin'>Changbin</button>
+   <button class="btn" data-filter='.hyunjin'>Hyunjin</button>
+   <button class="btn" data-filter='.jisung'>Han</button>
+   <button class="btn" data-filter='.felix'>Felix</button>
+   <button class="btn" data-filter=".seungmin">Seungmin</button>
+   <button class="btn" data-filter=".jeongin">I.N.</button>
+  </div>
+
+  <button class="sort-button" id="sortButton" onclick="sortDropdown()">
+    Sort by
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 18H9V16H3V18ZM3 6V8H21V6H3ZM3 13H15V11H3V13Z" fill="#323232"/>
+    </svg>
+  </button>
+  <div class="button-group sort-by-button-group" id="sortDropdown">
+    <div class="sortGroup" onclick="sortDropdown()">
+      <button class="button is-checked" data-sort-value="newest">Newest</button>
+      <button class="button" data-sort-value="oldest">Oldest</button>
+      <button class="button" data-sort-value="title">A-Z</button>
+    </div>
+  </div>
+
+  <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+  <div class="container">
+    <div onclick="toggle('.s1')" class="element-item felix solo-vlive s1">
+      <img src="/assets/images/hq720_3.jpg">
+      <h2 class="title"> Felix: Sunshine Vlog </h2>
+      <p> desc </p>
+      <p style="display:none" class="date">08/12/20</p>
+      <div class="see-more">
+        <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 0.8125C4.375 0.8125 1.70625 2.75625 0.625 5.5C1.70625 8.24375 4.375 10.1875 7.5 10.1875C10.625 10.1875 13.2937 8.24375 14.375 5.5C13.2937 2.75625 10.625 0.8125 7.5 0.8125ZM7.5 8.625C5.775 8.625 4.375 7.225 4.375 5.5C4.375 3.775 5.775 2.375 7.5 2.375C9.225 2.375 10.625 3.775 10.625 5.5C10.625 7.225 9.225 8.625 7.5 8.625ZM7.5 3.625C6.4625 3.625 5.625 4.4625 5.625 5.5C5.625 6.5375 6.4625 7.375 7.5 7.375C8.5375 7.375 9.375 6.5375 9.375 5.5C9.375 4.4625 8.5375 3.625 7.5 3.625Z" fill="#B42B2B"/>
+        </svg>
+        <p> All Episodes </p>
+      </div>
+      <div class="collection s1">
+        <hr style="margin: auto; color:#FDACAC; border-top: 1px solid #fdacac;">
+        <h2>Episodes</h2>
+        <div class= "episode-grid">
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+        </div>
+      </div>
+    </div>
+    <div onclick="toggle('.s2')" class="element-item jeongin solo-vlive s2">
+      <img src="/assets/images/hq720_2.jpg">
+      <h2 class="title"> I.N : I.N의 퐁당로그 </h2>
+      <p> desc </p>
+      <p style="display:none;" class="date">08/1/20</p>
+      <div class="see-more">
+        <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 0.8125C4.375 0.8125 1.70625 2.75625 0.625 5.5C1.70625 8.24375 4.375 10.1875 7.5 10.1875C10.625 10.1875 13.2937 8.24375 14.375 5.5C13.2937 2.75625 10.625 0.8125 7.5 0.8125ZM7.5 8.625C5.775 8.625 4.375 7.225 4.375 5.5C4.375 3.775 5.775 2.375 7.5 2.375C9.225 2.375 10.625 3.775 10.625 5.5C10.625 7.225 9.225 8.625 7.5 8.625ZM7.5 3.625C6.4625 3.625 5.625 4.4625 5.625 5.5C5.625 6.5375 6.4625 7.375 7.5 7.375C8.5375 7.375 9.375 6.5375 9.375 5.5C9.375 4.4625 8.5375 3.625 7.5 3.625Z" fill="#B42B2B"/>
+        </svg>
+        <p> All Episodes </p>
+      </div>
+      <div class="collection s2">
+        <hr style="margin: auto; color:#FDACAC; border-top: 1px solid #fdacac;">
+        <h2>Episodes</h2>
+        <div class= "episode-grid">
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+        </div>
+      </div>
+    </div>
+    <div onclick="toggle('.s3')" class="element-item bangchan solo-vlive s3">
+      <img src="assets/images/hq720_4.jpg">
+      <h2 class="title"> Bang Chang: CHAN BANG VLOG </h2>
+      <p> desc </p>
+      <p style="display:none" class="date">10/12/20</p>
+      <div class="see-more">
+        <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 0.8125C4.375 0.8125 1.70625 2.75625 0.625 5.5C1.70625 8.24375 4.375 10.1875 7.5 10.1875C10.625 10.1875 13.2937 8.24375 14.375 5.5C13.2937 2.75625 10.625 0.8125 7.5 0.8125ZM7.5 8.625C5.775 8.625 4.375 7.225 4.375 5.5C4.375 3.775 5.775 2.375 7.5 2.375C9.225 2.375 10.625 3.775 10.625 5.5C10.625 7.225 9.225 8.625 7.5 8.625ZM7.5 3.625C6.4625 3.625 5.625 4.4625 5.625 5.5C5.625 6.5375 6.4625 7.375 7.5 7.375C8.5375 7.375 9.375 6.5375 9.375 5.5C9.375 4.4625 8.5375 3.625 7.5 3.625Z" fill="#B42B2B"/>
+        </svg>
+        <p> All Episodes </p>
+      </div>
+      <div class="collection s3">
+        <hr style="margin: auto; color:#FDACAC; border-top: 1px solid #fdacac;">
+        <h2>Episodes</h2>
+        <div class= "episode-grid">
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+        </div>
+      </div>
+    </div>
+    <div onclick="toggle('.s4')" class="element-item hyunjin solo-vlive s4">
+      <img src="assets/images/hq720_5.jpg">
+      <h2 class="title"> Hyunjin : Hyun.e's Holiday with Kami</h2>
+      <p> desc </p>
+      <p style="display:none" class="date">08/22/20</p>
+      <div class="see-more">
+        <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 0.8125C4.375 0.8125 1.70625 2.75625 0.625 5.5C1.70625 8.24375 4.375 10.1875 7.5 10.1875C10.625 10.1875 13.2937 8.24375 14.375 5.5C13.2937 2.75625 10.625 0.8125 7.5 0.8125ZM7.5 8.625C5.775 8.625 4.375 7.225 4.375 5.5C4.375 3.775 5.775 2.375 7.5 2.375C9.225 2.375 10.625 3.775 10.625 5.5C10.625 7.225 9.225 8.625 7.5 8.625ZM7.5 3.625C6.4625 3.625 5.625 4.4625 5.625 5.5C5.625 6.5375 6.4625 7.375 7.5 7.375C8.5375 7.375 9.375 6.5375 9.375 5.5C9.375 4.4625 8.5375 3.625 7.5 3.625Z" fill="#B42B2B"/>
+        </svg>
+        <p> All Episodes </p>
+      </div>
+      <div class="collection s4">
+        <hr style="margin: auto; color:#FDACAC; border-top: 1px solid #fdacac;">
+        <h2>Episodes</h2>
+        <div class= "episode-grid">
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+        </div>
+      </div>
+    </div>
+    <div onclick="toggle('.s5')" class="element-item changbin solo-vlive s5">
+      <img src="assets/images/hq720_6.jpg">
+      <h2 class="title"> Changbin : 돼끼, 쏟아지는 아무말 </h2>
+      <p> desc </p>
+      <p style="display:none" class="date">06/12/20</p>
+      <div class="see-more">
+        <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 0.8125C4.375 0.8125 1.70625 2.75625 0.625 5.5C1.70625 8.24375 4.375 10.1875 7.5 10.1875C10.625 10.1875 13.2937 8.24375 14.375 5.5C13.2937 2.75625 10.625 0.8125 7.5 0.8125ZM7.5 8.625C5.775 8.625 4.375 7.225 4.375 5.5C4.375 3.775 5.775 2.375 7.5 2.375C9.225 2.375 10.625 3.775 10.625 5.5C10.625 7.225 9.225 8.625 7.5 8.625ZM7.5 3.625C6.4625 3.625 5.625 4.4625 5.625 5.5C5.625 6.5375 6.4625 7.375 7.5 7.375C8.5375 7.375 9.375 6.5375 9.375 5.5C9.375 4.4625 8.5375 3.625 7.5 3.625Z" fill="#B42B2B"/>
+        </svg>
+        <p> All Episodes </p>
+      </div>
+      <div class="collection s5">
+        <hr style="margin: auto; color:#FDACAC; border-top: 1px solid #fdacac;">
+        <h2>Episodes</h2>
+        <div class= "episode-grid">
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+          <a class="episode" href="here"><p>1</p><img class="thumbnail" src="assets/images/hq720_2.jpg"></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="content-widget.js"></script>
+
+</html>
