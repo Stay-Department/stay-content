@@ -1,85 +1,17 @@
 // external js: isotope.pkgd.js
 
-// init Isotope
-var iso;
-
-imagesLoaded('.container', function() {
-iso = new Isotope( '.container', {
-  itemSelector: '.element-item',
-  layoutMode: 'fitRows'
-});
-});
-
-// filter functions
-var filterFns = {
-  // show if number is greater than 50
-  numberGreaterThan50: function( itemElem ) {
-    var number = itemElem.querySelector('.number').textContent;
-    return parseInt( number, 10 ) > 50;
-  },
-  // show if name ends with -ium
-  ium: function( itemElem ) {
-    var name = itemElem.querySelector('.name').textContent;
-    return name.match( /ium$/ );
-  }
-};
-
-// bind filter button click
-var filtersElem = document.querySelector('.filters-button-group');
-filtersElem.addEventListener( 'click', function( event ) {
-  // only work with buttons
-  if ( !matchesSelector( event.target, 'button' ) ) {
-    return;
-  }
-  var filterValue = event.target.getAttribute('data-filter');
-  // use matching filter function
-  filterValue = filterFns[ filterValue ] || filterValue;
-  iso.arrange({ filter: filterValue });
-});
-
-// change is-checked class on buttons
-var buttonGroups = document.querySelectorAll('.button-group');
-for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
-  var buttonGroup = buttonGroups[i];
-  radioButtonGroup( buttonGroup );
-}
-
-function radioButtonGroup( buttonGroup ) {
-  buttonGroup.addEventListener( 'click', function( event ) {
-    // only work with buttons
-    if ( !matchesSelector( event.target, 'button' ) ) {
-      return;
-    }
-    buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
-    event.target.classList.add('is-checked');
-  });
-}
-
-function toggle(name) {
-  var element = document.querySelectorAll(name);
-  for (var i=0; i< element.length; i++){
-    if (element[i].classList.toggle('selected')) {
-      element[i].querySelector('.see-more').classList.toggle('showNone');
-      iso.arrange({filter:name});
-      iso.layout();
-    } else {
-        setTimeout(function(){iso.arrange({filter:"*"});}, 1000);
-        element[i].querySelector('.see-more').classList.toggle('showNone');
-    }
-  }
-}
-
-
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function sortDropdown() {
-  document.getElementById("sortDropdown").classList.toggle("show");
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
 }
+
+
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.button')) {
-    var dropdowns = document.getElementsByClassName("sort-by-button-group");
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
@@ -89,3 +21,99 @@ window.onclick = function(event) {
     }
   }
 }
+jQuery(document).ready(function($) {
+  $(".ugb-blog-posts__category").each(function(){
+  switch ( $(this).find("a").text()) {
+    case "JYP Updates":
+      $(this).addClass("jyp-updates");
+      break;
+	case "Interview":
+      $(this).addClass("interview");
+      break;
+    case "Fan Talk":
+      $(this).addClass("fan-talk");
+      break;
+	case "Melon":
+      $(this).addClass("melon");
+      break;
+	case "Genie":
+      $(this).addClass("genie");
+      break;
+	case "Article":
+      $(this).addClass("article");
+      break;
+    }
+  });
+});
+
+// init Isotope
+
+/*jQuery(document).ready(function ($) {
+  var $grid = $('.container').imagesLoaded( function() {
+    // init Isotope after all images have loaded
+    $grid.isotope({
+      itemSelector: '.element-item',
+      layoutMode: 'fitRows',
+      getSortData: {
+        oldest: '.date',
+        newest: '.date',
+        title: '.title'
+      },
+      sortAscending: {
+        oldest: true,
+        newest: false,
+        title: true
+      }});
+  });
+
+
+  $('.sort-by-button-group').on( 'click', 'button', function() {
+    var sortValue = $(this).attr('data-sort-value');
+    $grid.isotope({ sortBy: sortValue });
+  });
+
+
+  // filter functions
+  var filterFns = {
+    // show if number is greater than 50
+    numberGreaterThan50: function() {
+      var number = $(this).find('.number').text();
+      return parseInt( number, 10 ) > 50;
+    },
+    // show if name ends with -ium
+    ium: function() {
+      var name = $(this).find('.name').text();
+      return name.match( /ium$/ );
+    }
+  };
+
+  // bind filter button click
+  $('.filters-button-group').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    // use filterFn if matches value
+    filterValue = filterFns[ filterValue ] || filterValue;
+    $grid.isotope({ filter: filterValue });
+  });
+
+  // change is-checked class on buttons
+  $('.button-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $( this ).addClass('is-checked');
+    });
+  });
+
+  $('.element-item').on( 'click', 'button', function() {
+    var show = $(this).attr('data-show-id');
+    $(".collection." + show).toggleClass("show");
+  });
+
+
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content
+  function sortDropdown() {
+    document.getElementById("sortDropdown").classList.toggle("show");
+  }
+
+});*/
